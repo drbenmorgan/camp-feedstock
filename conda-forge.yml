@@ -1,1 +1,11 @@
-{}
+github:
+  user_or_org: drbenmorgan
+channels:
+  targets:
+    - ["bmorgan", "main"]
+provider:
+  linux: travis
+  osx: travis
+  win: None
+  linux_ppc64le: None
+  linux_aarch64: None
