@@ -6,7 +6,7 @@ set -x
           python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
 
 echo "Removing homebrew from CI to avoid conflicts." && echo -en 'travis_fold:start:remove_homebrew\\r'
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh > ~/uninstall_homebrew
 chmod +x ~/uninstall_homebrew
 ~/uninstall_homebrew -fq
 rm ~/uninstall_homebrew
