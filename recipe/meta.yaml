@@ -1,0 +1,21 @@
+package:
+  name: camp
+  version: 0.8.0
+
+source:
+  git_url: https://github.com/drbenmorgan/camp.git
+  git_tag: master
+
+build:
+  skip: true # [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - git
+  host:
+    - boost
+  run:
+    - boost
